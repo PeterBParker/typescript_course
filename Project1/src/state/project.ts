@@ -1,3 +1,5 @@
+import { Project, ProjectStatus } from "../models/project";
+
 type Listener<T> = (items: T[]) => void;
 
 class State<T> {
@@ -7,7 +9,6 @@ class State<T> {
     this.listeners.push(listenerFunc);
   }
 }
-import { Project, ProjectStatus } from "../models/project.js";
 
 // Project State Management
 export class ProjectState extends State<Project> {

@@ -142,6 +142,15 @@ Nullish Coalescing operator is `??` and it means "Hey if this value is null or u
 
 ## Generics
 
-pass
+Similar to Java.
 
 ## Decorators
+
+See my decorator code exploration [here](./Section8/app.ts).
+
+## Webpack
+
+Why do we need webpack? We have es6 imports to handle organizing our code and Typescript can compile it to valid javascript and modern browsers can correctly identify and download required script files. There are two main reasons:
+
+1. To support older browsers webpack can translate es6 syntax and compile to a single file.
+2. Each time the browser needs to download a file it has to establish a new connection with the server. This adds a unnecessary overhead that grows with the number of files we have. A "bundler" can take related files and bundle them together into a single file to reduce this overhead. What is Webpack? It is a bundler and "build orchestration." It optimizes/minimizes code as well to reduce the size of the scripts.
